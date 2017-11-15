@@ -25,11 +25,10 @@ public class ZombieFactory : MonoBehaviour {
 	}
 
 	void spawnZombie(){
-		print ("spawning zombie");
 		Vector3 spawnPoint = Vector3.forward * radius + Vector3.up * 0.4f;
 		float randomAngle = Random.value * spawnArcAngle - spawnArcAngle / 2f;
-
 		spawnPoint = Quaternion.Euler (0, randomAngle, 0) * spawnPoint;
+
 		GameObject thisZombie = Object.Instantiate (zombiePrefab, spawnPoint, Quaternion.identity) as GameObject;
 		thisZombie.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform);
 	}

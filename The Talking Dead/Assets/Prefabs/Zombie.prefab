@@ -394,9 +394,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4284266582090788}
   - component: {fileID: 114369788090249618}
+  - component: {fileID: 136632239234020042}
+  - component: {fileID: 114007625243661094}
+  - component: {fileID: 54671217911133026}
+  - component: {fileID: 114611820171391314}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +511,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1881473835953066}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.52, y: 0.74, z: 3.53}
+  m_LocalPosition: {x: 0.52, y: 0.4, z: 3.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4402115564533512}
@@ -1720,6 +1724,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1716865471797424}
   m_Mesh: {fileID: 4300024, guid: 7c19302c15c7d4ef2b7b9b206ab797ab, type: 3}
+--- !u!54 &54671217911133026
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1881473835953066}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!102 &102414482492727252
 TextMesh:
   serializedVersion: 3
@@ -1741,6 +1760,17 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &114007625243661094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1881473835953066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa87db5c051124f5d96f8368600bbb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114369788090249618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1753,3 +1783,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+--- !u!114 &114611820171391314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1881473835953066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f128bd7328e8b416b830740f12626949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &136632239234020042
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1881473835953066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.28
+  m_Height: 1.15
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
