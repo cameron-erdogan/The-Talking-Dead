@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145311425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.18, z: -3.32}
+  m_LocalPosition: {x: 0, y: 0.18, z: -4.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1884517644}
@@ -193,6 +193,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 947afe34e158345bd889f2208a20999f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &669508064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 669508065}
+  - component: {fileID: 669508066}
+  - component: {fileID: 669508067}
+  m_Layer: 0
+  m_Name: WordQueue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &669508065
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669508064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42742363, y: 0.4, z: 2.3104796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669508066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669508064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7f2649e88814650822c1717bc89ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameManager: {fileID: 1782739838}
+--- !u!114 &669508067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669508064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eece9128bde84bcba87bf0c3d7dbca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WordQueue: {fileID: 669508066}
 --- !u!1 &1227750929
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 1227750929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.8861513, y: 2.8861518, z: 2.8861518}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -317,10 +371,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c0e27cbe6bf4b5a979d4b69626120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3.15
-  spawnRate: 5
-  zombiePrefab: {fileID: 1881473835953066, guid: 947afe34e158345bd889f2208a20999f,
+  GameManager: {fileID: 1782739838}
+  Radius: 5.61
+  ZombiePrefab: {fileID: 1881473835953066, guid: 947afe34e158345bd889f2208a20999f,
     type: 2}
+--- !u!1 &1782739837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1782739839}
+  - component: {fileID: 1782739838}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Game Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1782739838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782739837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb8e9be64b20442ea48262d8d7eedf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WordQueue: {fileID: 669508066}
+  ZombieFactory: {fileID: 1624799304}
+--- !u!4 &1782739839
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782739837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.42742363, y: 0.4, z: 2.3104796}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1884517639
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,8 +465,8 @@ Camera:
   m_GameObject: {fileID: 1884517639}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.29260382, g: 0.30463043, b: 0.32352942, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

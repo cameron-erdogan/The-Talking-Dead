@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class WordZombie : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public TextMesh wordLabel;
+
+	public void SetLabel(string word){
+		wordLabel.text = word;
 	}
 }

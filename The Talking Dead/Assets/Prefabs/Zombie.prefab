@@ -1782,7 +1782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 798316eb802644da5b5546b4f1579888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  Speed: 0.5
 --- !u!114 &114611820171391314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1794,6 +1794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f128bd7328e8b416b830740f12626949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wordLabel: {fileID: 102414482492727252}
 --- !u!136 &136632239234020042
 CapsuleCollider:
   m_ObjectHideFlags: 1
