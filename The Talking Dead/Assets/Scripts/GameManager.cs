@@ -31,4 +31,8 @@ public class GameManager : MonoBehaviour {
 			zombieTimer = 0;
 		}
 	}
+
+	public void KillZombieWithWord(string word){
+		print ("should kill zombie with word " + word);
+	}
 }
