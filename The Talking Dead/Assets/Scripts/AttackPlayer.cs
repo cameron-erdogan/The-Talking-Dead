@@ -11,7 +11,7 @@ public class AttackPlayer : MonoBehaviour {
 		if (other.tag == "Player") {
 			//could do something to player
 			//just kill myself for now
-			Destroy(this.gameObject);
+//			Destroy(this.gameObject);
 		}
 	}
 }

@@ -14,16 +14,18 @@ public class ZombieFactory : MonoBehaviour {
 
 
 	//spawns zombie and returns 
-	public GameObject SpawnZombie(string word){
+	public WordZombie SpawnZombie(string word){
 		Vector3 spawnPoint = Vector3.forward * Radius + Vector3.up * 0.4f;
 		float randomAngle = Random.value * spawnArcAngle - spawnArcAngle / 2f;
 		spawnPoint = Quaternion.Euler (0, randomAngle, 0) * spawnPoint;
 
 		GameObject thisZombie = Object.Instantiate (ZombiePrefab, spawnPoint, Quaternion.identity) as GameObject;
 		thisZombie.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform);
-		thisZombie.GetComponent<WordZombie> ().SetLabel (word);
 
-		return thisZombie;
+		WordZombie wordZombie = thisZombie.GetComponent<WordZombie> ();
+		wordZombie.SetWord (word);
+
+		return wordZombie;
 	}
 
 	void OnDrawGizmos(){
