@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour {
 			currentZombies.Remove (zombie);
 			Destroy (zombie.gameObject);
 		}
-		//need to look through currentZombies
 
 		print (currentZombies.Count);
 		 
