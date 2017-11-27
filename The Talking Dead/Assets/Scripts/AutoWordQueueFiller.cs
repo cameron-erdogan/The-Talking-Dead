@@ -54,11 +54,12 @@ public class AutoWordQueueFiller : MonoBehaviour {
 		"dragon",
 		"wealthy",
 		"canyon",
-		"tumbling"
+		"tumbling",
 		"Einstein",
 		"moustache",
 		"exciting", "gland", "paralysed", "gargoyle", "atrocity", "enter", "carcinogenic", "compartment", "hairless", "pull", "comrade", "best", "collectable", "patient", "gimmick", "fluctuation", "formal", "grave", "favor", "prophet", "sexiest", "daydreamer", "cynical", "predict", "fraction", "boundary", "drink", "someone", "mistaken", "cartel", "flower"
 		};
+
 
 	// Use this for initialization
 	void Start () {
