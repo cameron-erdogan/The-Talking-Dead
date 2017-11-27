@@ -15,9 +15,9 @@ public class DisplayRemainingTime : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (tm.text != (180.00 - Time.time).ToString("F"))
+        if (tm.text != (120.00 - Time.time).ToString("F"))
         {
-            tm.text = (180.00 - Time.time).ToString("F");
+            tm.text = (120.00 - Time.time).ToString("F");
         }
     }
 }
