@@ -21,12 +21,14 @@ public class ModeratorKeyboardInputManager : MonoBehaviour {
 	}
 
 	public void ProcessTextInput(string inputText){
-		
-		//if our text contains a newline, it means we pressed enter and should "submit" this word
-		if (inputText.Length > 0) {
-			if (inputText.Contains(System.Environment.NewLine)) {
-				inputText = inputText.Replace(System.Environment.NewLine, "");
-				GameManager.KillZombieWithWord (inputText);
+        
+        //if our text contains a newline, it means we pressed enter and should "submit" this word
+        if (inputText.Length > 0) {
+            
+            if (inputText.Contains("\n")) {
+                print(inputText);
+                inputText = inputText.Replace("\n", "");              
+                GameManager.KillZombieWithWord (inputText);
 				inputField.text = "";
 			}
 		}
