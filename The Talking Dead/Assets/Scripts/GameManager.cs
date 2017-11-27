@@ -64,5 +64,12 @@ public class GameManager : MonoBehaviour {
         print("zombies killed: " + zombieKilled);
 
     }
+
+    public void TimeUp()
+    {
+        Time.timeScale = 0;
+
+        print("you survived!");
+    }
 }
 
