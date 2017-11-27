@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class InteractiveText : MonoBehaviour {
 
@@ -11,8 +12,6 @@ public class InteractiveText : MonoBehaviour {
     private Color highlightColor = Color.red;
     [SerializeField]
     private Color clickedColor = Color.gray;
-    [SerializeField]
-    private List<UnityEvent> _events;
 
     // Use this for initialization
     void Start () {
@@ -42,6 +41,7 @@ public class InteractiveText : MonoBehaviour {
             {
                 //add button down events here
                 ClickHighlight(true);
+                SceneManager.LoadScene(1);
             }
             else
             {
