@@ -285,7 +285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightColor: {r: 1, g: 0, b: 0, a: 1}
   clickedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  _events: []
 --- !u!95 &1669241670 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95067619243912754, guid: cacdc5c6387b98f4da667a1ed87fe10d,
@@ -418,6 +417,11 @@ Prefab:
     - target: {fileID: 4133553052427142, guid: cacdc5c6387b98f4da667a1ed87fe10d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114551462895671946, guid: cacdc5c6387b98f4da667a1ed87fe10d,
+        type: 2}
+      propertyPath: resetTrackerOnLoad
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cacdc5c6387b98f4da667a1ed87fe10d, type: 2}
