@@ -7,11 +7,16 @@ public class AttackPlayer : MonoBehaviour {
 	// Use this for initialization
 
 	void OnTriggerEnter(Collider other) {
-		print ("collided with " + other.tag);
 		if (other.tag == "Player") {
-			//could do something to player
-			//just kill myself for now
-//			Destroy(this.gameObject);
+			//should tell the game manager that this zombie attacked the player
+			WordZombie zombie = GetComponent<WordZombie>();
+			GameManager gameManager = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
+
+			if (zombie != null && gameManager != null) {
+				gameManager.ZombieAttackedPlayer (zombie);
+			} else {
+				Debug.Log ("word zombie or game manager is null, shouldn't be null");
+			}
 		}
 	}
 }
