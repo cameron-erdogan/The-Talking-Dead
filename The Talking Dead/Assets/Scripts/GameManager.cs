@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour {
 	private float spawnRate = 2f;
 	private float maxZombies = 4;
 
+    public int zombieKilled = 0;
+
 	// Use this for initialization
 	void Start () {
 		currentZombies = new List<WordZombie> ();
@@ -43,16 +45,17 @@ public class GameManager : MonoBehaviour {
 		foreach (WordZombie zombie in currentZombies) {
 			if (zombie.GetWord ().Equals (word)) {
 				zombiesToRemove.Add (zombie);
-			}
+                zombieKilled++;
+            }
 		}
 
 		foreach (WordZombie zombie in zombiesToRemove) {
 			currentZombies.Remove (zombie);
-			Destroy (zombie.gameObject);
-		}
-
+			Destroy (zombie.gameObject);  
+        }
 		print (currentZombies.Count);
-		 
-	}
+        print("zombies killed: " + zombieKilled);
+
+    }
 }
 
