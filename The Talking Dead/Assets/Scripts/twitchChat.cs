@@ -323,6 +323,8 @@ public class twitchChat : MonoBehaviour
 				if (dictionary.Contains (actualWord)) 
 				{
 					Debug.Log (actualWord);
+					GameManager gameManager = GameObject.FindGameObjectWithTag ("Game Manager").GetComponent<GameManager> ();
+					gameManager.AddWordToWordQueue (actualWord);
 				}
 			} 
 			else if (msg.Substring (0, 5).ToLower () == "!vote") 

@@ -71,5 +71,9 @@ public class GameManager : MonoBehaviour {
 
         print("you survived!");
     }
+
+	public void AddWordToWordQueue(string word){
+		WordQueue.AddWordToQueue (word);
+	}
 }
 

@@ -22,7 +22,6 @@ public class WordQueue : MonoBehaviour {
 		
 	}
 
-	//not gonna use this yet.
 	public void AddWordToQueue(string word){
 		queue.Enqueue (word);
 	}
