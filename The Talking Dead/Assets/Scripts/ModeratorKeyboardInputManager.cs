@@ -26,7 +26,7 @@ public class ModeratorKeyboardInputManager : MonoBehaviour {
         if (inputText.Length > 0) {
             
             if (inputText.Contains("\n")) {
-                print(inputText);
+//                print(inputText);
                 inputText = inputText.Replace("\n", "");              
                 GameManager.KillZombieWithWord (inputText);
 				inputField.text = "";
