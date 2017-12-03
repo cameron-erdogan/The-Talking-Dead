@@ -38,7 +38,7 @@ public class Prompt : MonoBehaviour {
 		"Mario",
 		"Marie Antoinette",
 		"DaVinci",
-		"Beethoven",
+		"Beethoven"
 	};
 
 	private string[] PlacesArray = {
@@ -48,10 +48,10 @@ public class Prompt : MonoBehaviour {
 		"North Pole",
 		"Mt. Everest",
 		"Paris",
-		"The moon,
+		"The moon",
 		"The Underworld",
-		"Dungeon"
-		"Swimming pool"
+		"Dungeon",
+		"Swimming pool",
 		"Desert island",
 		"Castle",
 		"Circus",
@@ -70,8 +70,8 @@ public class Prompt : MonoBehaviour {
 		"Stuck in traffic",
 		"Beach",
 		"Jungle",
-		"The internet"
-		"Graveyard",
+		"The internet",
+		"Graveyard"
 	};
 
 	private string[] ActionsArray = {
@@ -96,7 +96,7 @@ public class Prompt : MonoBehaviour {
 		"Going on a date",
 		"Missing the bus",
 		"Crying",
-		"Escaping"
+		"Escaping",
 		"Camping",
 		"Flying",
 		"Shopping",
@@ -104,7 +104,7 @@ public class Prompt : MonoBehaviour {
 		"Sightseeing",
 		"Party crashing",
 		"Sneezing",
-		"Doing yoga",
+		"Doing yoga"
 	};
 
 	// Use this for initialization
@@ -116,7 +116,7 @@ public class Prompt : MonoBehaviour {
 
 		for ( int i = 0; i < RandomPrompt.Length; i++ ) {
 			for (int j = 0; j < RandomPrompt[i].Length; j++) {
-				var prompt = Random.Range(0, RandomPrompt.Length);
+				var prompt = RandomPrompt[Random.Range(0, RandomPrompt.Length)];
 				Debug.LogError (RandomPrompt [prompt]);
 			}
 		}
