@@ -323,7 +323,7 @@ public class twitchChat : MonoBehaviour
 				{
 					Debug.Log (actualWord);
 					GameManager gameManager = GameObject.FindGameObjectWithTag ("Game Manager").GetComponent<GameManager> ();
-					gameManager.AddWordToWordQueue (actualWord);
+					gameManager.AddInfoToWordQueue (new ZombieInfo(actualWord, getUser(line)));
 				}
 			} 
 			else if (msg.Substring (0, 5).ToLower () == "!vote") 

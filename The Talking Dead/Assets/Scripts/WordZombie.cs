@@ -3,19 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+public class ZombieInfo
+{
+    public string word;
+    public string user;
+
+    public ZombieInfo(string word, string user)
+    {
+        this.word = word;
+        this.user = user;
+    }
+}
+
 public class WordZombie : MonoBehaviour, System.IEquatable<WordZombie> {
 
 	public TextMeshPro wordLabel;
 
-	private string word;
+    private ZombieInfo info;
 
-	public void SetWord(string word){
-		this.word = word;
-		wordLabel.text = word;
-	}
+    public void SetInfo(ZombieInfo info)
+    {
+        this.info = info;
+        wordLabel.text = info.word;
+    }
 
 	public string GetWord(){
-		return word;
+        return info.word;
 	}
 
 	public bool Equals(WordZombie otherZombie){

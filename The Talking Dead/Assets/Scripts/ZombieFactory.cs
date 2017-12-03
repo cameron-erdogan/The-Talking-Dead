@@ -14,7 +14,7 @@ public class ZombieFactory : MonoBehaviour {
 
 
 	//spawns zombie and returns 
-	public WordZombie SpawnZombie(string word){
+	public WordZombie SpawnZombie(ZombieInfo info){
 		Vector3 spawnPoint = Vector3.forward * Radius + Vector3.up * 0.4f;
 		float randomAngle = Random.value * spawnArcAngle - spawnArcAngle / 2f;
 		spawnPoint = Quaternion.Euler (0, randomAngle, 0) * spawnPoint;
@@ -23,7 +23,7 @@ public class ZombieFactory : MonoBehaviour {
 		thisZombie.transform.LookAt (GameObject.FindGameObjectWithTag ("Player").transform);
 
 		WordZombie wordZombie = thisZombie.GetComponent<WordZombie> ();
-		wordZombie.SetWord (word);
+		wordZombie.SetInfo (info);
 
 		return wordZombie;
 	}
