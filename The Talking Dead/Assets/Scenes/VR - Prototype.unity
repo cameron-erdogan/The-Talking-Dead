@@ -122,12 +122,12 @@ Prefab:
     - target: {fileID: 224795800901628886, guid: d7a03d43286474981a3a4835f3140d5e,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 763
+      value: 603
       objectReference: {fileID: 0}
     - target: {fileID: 224795800901628886, guid: d7a03d43286474981a3a4835f3140d5e,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 477
+      value: 377
       objectReference: {fileID: 0}
     - target: {fileID: 224795800901628886, guid: d7a03d43286474981a3a4835f3140d5e,
         type: 2}
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 1972408484}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
