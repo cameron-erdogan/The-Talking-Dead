@@ -22,8 +22,7 @@ public class twitchChat : MonoBehaviour
     public List<string> channels;
 
 	//counter for upvotes and downvotes
-	public int upvotes = 0;
-	public int downvotes = 0;
+	public static int UpvoteDownvote;
 
     private string address = "irc.chat.twitch.tv";
     private int port = 6667;
@@ -334,20 +333,14 @@ public class twitchChat : MonoBehaviour
 
 				if (vote == "up") 
 				{
-					//non-static variable for input w/ each line
-					int numUpvotes;
-					//increase counter for upvotes
-					numUpvotes = ++upvotes;
-					Debug.Log (upvotes);
+					//set vote to 1
+					UpvoteDownvote = 1;
 				}
 				else if (vote == "down") 
 				{
-					//non-static variable for input w/ each line
-					int numDownvotes;
-					//increase counter for upvotes
-					numDownvotes = ++downvotes;
-					Debug.Log (downvotes);
+					UpvoteDownvote = 0;
 				} 
+				Debug.Log (UpvoteDownvote);
 			}
 
         }
