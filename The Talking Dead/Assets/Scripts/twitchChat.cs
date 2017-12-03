@@ -330,7 +330,7 @@ public class twitchChat : MonoBehaviour
 			else if (msg.Substring (0, 5).ToLower () == "!vote") 
 			{
 				string vote = msg.Substring (6);
-				Debug.LogError (vote);
+				Debug.Log (vote);
 
 				if (vote == "up") 
 				{

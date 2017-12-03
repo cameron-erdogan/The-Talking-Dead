@@ -6,11 +6,13 @@ public class WordQueue : MonoBehaviour {
 
 	public GameManager GameManager;
 
+	private Queue premadeQueue;
 	private Queue queue;
 
 	// Use this for initialization
 	void Awake () {
 		queue = new Queue ();
+		premadeQueue = new Queue ();
 	}
 
 	void Start(){
@@ -26,7 +28,21 @@ public class WordQueue : MonoBehaviour {
 		queue.Enqueue (word);
 	}
 
+	public void AddWordToPremadeQueue(string word){
+		premadeQueue.Enqueue (word);
+	}
+
+	public bool HasNextWord(){
+		return (queue.Count > 0) || (premadeQueue.Count > 0);
+	}
+
+	//should only call this if you've checked that HasNextWord() returns true
+	//you'll get errorz otherwise
 	public string GetNextWord(){
-		return queue.Dequeue () as string;
+		if (queue.Count > 0) {
+			return queue.Dequeue () as string;
+		} else {
+			return premadeQueue.Dequeue () as string;
+		}
 	}
 }
