@@ -64,7 +64,7 @@ public class AutoWordQueueFiller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < testWords.Length; i++) {
-			WordQueue.AddWordToQueue (testWords [i]);
+			WordQueue.AddWordToPremadeQueue (testWords [i]);
 		}
 	}
 	

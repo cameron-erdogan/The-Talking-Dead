@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
 	private List<WordZombie> currentZombies;
 	private float zombieTimer = 0f;
-	private float spawnRate = 2f;
+	private float spawnRate = 3f;
 	private float maxZombies = 4;
 
     public int zombieKilled = 0;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour {
 		if (zombieTimer > spawnRate) {
 			//should get word from word queue
 
-			if (currentZombies.Count < maxZombies) {
+			if (currentZombies.Count < maxZombies && WordQueue.HasNextWord() == true) {
 				string word = WordQueue.GetNextWord ();
 				currentZombies.Add (ZombieFactory.SpawnZombie (word));
 			}
