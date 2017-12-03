@@ -6,7 +6,7 @@ public class VoteAggregator : MonoBehaviour {
 
 //	public static int UpvoteDownvote;
 
-	public int[] aggregate; 
+	public static int[] aggregate; 
 	private int nextIndex = 0;
 	private int count = 0;
 
@@ -59,7 +59,7 @@ public class VoteAggregator : MonoBehaviour {
 
 		//create average and return it for UI element
 		int sum = CalculateSum ();
-		float avg = (float)sum / aggregate.Length;
+		float avg = (float)sum / count;
 
 		Debug.Log (avg);
 		return avg;
