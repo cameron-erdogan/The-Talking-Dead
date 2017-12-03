@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WordQueue: {fileID: 114839132949085248}
   ZombieFactory: {fileID: 0}
+  AudienceUI: {fileID: 0}
   zombieKilled: 0
 --- !u!114 &114481505770426782
 MonoBehaviour:
@@ -200,8 +201,9 @@ MonoBehaviour:
   oath: oauth:6nmw440j01lzqryl20gdjgjdmfzrsp
   username: Tester___Name
   channels:
-  - camrawne_dev
-  voteAggregator: {fileID: 114000948569281944}
+  - talkingdeadgame
+  voteAggregator: {fileID: 0}
+  prompt: {fileID: 0}
 --- !u!114 &114526775572980556
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -31,6 +31,11 @@ public class WordZombie : MonoBehaviour, System.IEquatable<WordZombie> {
         return info.word;
 	}
 
+    public ZombieInfo GetInfo()
+    {
+        return info;
+    }
+
 	public bool Equals(WordZombie otherZombie){
 		print ("comparing jawns");
 		return GetWord ().Equals (otherZombie.GetWord ());
