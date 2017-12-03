@@ -64,7 +64,8 @@ public class AutoWordQueueFiller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < testWords.Length; i++) {
-			WordQueue.AddWordToPremadeQueue (testWords [i]);
+            ZombieInfo info = new ZombieInfo(testWords[i], "");
+            WordQueue.AddInfoToPremadeQueue(info);
 		}
 	}
 	
