@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WordZombie : MonoBehaviour, System.IEquatable<WordZombie> {
 
-	public TextMesh wordLabel;
+	public TextMeshPro wordLabel;
+
+	private string word;
 
 	public void SetWord(string word){
+		this.word = word;
 		wordLabel.text = word;
 	}
 
 	public string GetWord(){
-		return wordLabel.text;
+		return word;
 	}
 
 	public bool Equals(WordZombie otherZombie){
