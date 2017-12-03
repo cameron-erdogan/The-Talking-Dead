@@ -30,9 +30,9 @@ public class GameManager : MonoBehaviour {
 		if (zombieTimer > spawnRate) {
 			//should get word from word queue
 
-			if (currentZombies.Count < maxZombies && WordQueue.HasNextWord() == true) {
-				string word = WordQueue.GetNextWord ();
-				currentZombies.Add (ZombieFactory.SpawnZombie (word));
+			if (currentZombies.Count < maxZombies && WordQueue.HasNextZombieInfo() == true) {
+				ZombieInfo info = WordQueue.GetNextZombieInfo ();
+				currentZombies.Add (ZombieFactory.SpawnZombie (info));
 			}
 			zombieTimer = 0;
 		}
@@ -72,8 +72,9 @@ public class GameManager : MonoBehaviour {
         print("you survived!");
     }
 
-	public void AddWordToWordQueue(string word){
-		WordQueue.AddWordToQueue (word);
+	public void AddInfoToWordQueue(ZombieInfo info){
+        WordQueue.AddInfoToQueue(info);
+        
 	}
 }
 

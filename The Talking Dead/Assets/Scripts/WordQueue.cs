@@ -24,25 +24,37 @@ public class WordQueue : MonoBehaviour {
 		
 	}
 
-	public void AddWordToQueue(string word){
-		queue.Enqueue (word);
-	}
+	//public void AddWordToQueue(string word){
+	//	queue.Enqueue (word);
+	//}
 
-	public void AddWordToPremadeQueue(string word){
-		premadeQueue.Enqueue (word);
-	}
+    public void AddInfoToQueue(ZombieInfo info)
+    {
+        queue.Enqueue(info);
+    }
 
-	public bool HasNextWord(){
+	//public void AddWordToPremadeQueue(string word){
+	//	premadeQueue.Enqueue (word);
+	//}
+
+    public void AddInfoToPremadeQueue(ZombieInfo info)
+    {
+        premadeQueue.Enqueue(info);
+    }
+
+	public bool HasNextZombieInfo(){
 		return (queue.Count > 0) || (premadeQueue.Count > 0);
 	}
 
 	//should only call this if you've checked that HasNextWord() returns true
 	//you'll get errorz otherwise
-	public string GetNextWord(){
-		if (queue.Count > 0) {
-			return queue.Dequeue () as string;
-		} else {
-			return premadeQueue.Dequeue () as string;
-		}
-	}
+    public ZombieInfo GetNextZombieInfo()
+    {
+        if (queue.Count > 0){
+            return queue.Dequeue() as ZombieInfo;
+        }
+        else{
+            return premadeQueue.Dequeue() as ZombieInfo;
+        }
+    }
 }
