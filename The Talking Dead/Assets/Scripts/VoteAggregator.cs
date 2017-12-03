@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class VoteAggregator : MonoBehaviour {
 
-	public static int UpvoteDownvote;
+//	public static int UpvoteDownvote;
 
-	public int[] aggregate = new int[] {}; 
+	public int[] aggregate; 
 	private int nextIndex = 0;
 	private int count = 0;
 
@@ -15,27 +15,53 @@ public class VoteAggregator : MonoBehaviour {
 
 	void Start () {
 
+		aggregate = new int[10];
+
+		//take vote and add to array
+//		count = count+1;
+//
+//		if ( count%10 == 0 ) {
+//			nextIndex = 0;
+//		}
+//
+//		//put upvote or downvote into the array from twitchChat
+//		aggregate[nextIndex++] = twitchChat.UpvoteDownvote;
+	}
+
+	public void Vote(int vote){
+
 		//take vote and add to array
 		count = count+1;
 
-		if ( count%10 == 0 ) {
+		//put upvote or downvote into the array from twitchChat
+		aggregate[nextIndex] = vote;
+		nextIndex++;
+
+		if ( nextIndex%10 == 0 ) {
 			nextIndex = 0;
 		}
 
-		aggregate[nextIndex++] = twitchChat.UpvoteDownvote;
 	}
 
-	public int CalculateSum(params int[] aggregate) {
+	public int CalculateSum() {
 
+		sum = 0;
+
+		//create a sum
 		for ( int i = 0; i < aggregate.Length; i++ ) {
 			sum += aggregate[i];
 		}
+		Debug.Log (sum);
 		return sum;
 	}
 
-	public decimal CalculateAvg(params int[] aggregate) {
-		int sum = CalculateSum (aggregate);
-		decimal avg = (decimal)sum / aggregate.Length;
+	public float CalculateAvg() {
+
+		//create average and return it for UI element
+		int sum = CalculateSum ();
+		float avg = (float)sum / aggregate.Length;
+
+		Debug.Log (avg);
 		return avg;
 	}
 	

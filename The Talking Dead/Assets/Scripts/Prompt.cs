@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Prompt : MonoBehaviour {
 
-	private string person;
-	private string place;
-	private string action;
+	public string prompt1;
+	public string prompt2;
+	public string prompt3;
 
 	private string[] PersonArray = {
 		"Princess",
@@ -107,19 +107,44 @@ public class Prompt : MonoBehaviour {
 		"Doing yoga"
 	};
 
+	public string RandomPerson() {
+		
+		//for each of the 3 arrays, find random word
+		prompt1 = PersonArray[Random.Range(0, PersonArray.Length)];
+		Debug.LogError (prompt1);
+		return prompt1;
+	}
+
+	public string RandomPlace() {
+
+		//for each of the 3 arrays, find random word
+		prompt2 = PlacesArray[Random.Range(0, PlacesArray.Length)];
+		Debug.LogError (prompt2);
+		return prompt2;
+	}
+
+	public string RandomAction() {
+
+		//for each of the 3 arrays, find random word
+		prompt3 = ActionsArray[Random.Range(0, ActionsArray.Length)];
+		Debug.LogError (prompt3);
+		return prompt3;
+	}
+			
+
 	// Use this for initialization
 	void Start () {
-		
-		string[][] RandomPrompt = {
-			PersonArray, PlacesArray, ActionsArray,
-		};
 
-		for ( int i = 0; i < RandomPrompt.Length; i++ ) {
-			for (int j = 0; j < RandomPrompt[i].Length; j++) {
-				var prompt = RandomPrompt[Random.Range(0, RandomPrompt.Length)];
-				Debug.LogError (RandomPrompt [prompt]);
-			}
-		}
+//		//initialize array of 3 arrays
+//		string[][] RandomPrompt = {
+//			PersonArray, PlacesArray, ActionsArray,
+//		};
+//
+//		Debug.LogError (RandomPrompt);
+			
+		RandomPerson ();
+		RandomPlace ();
+		RandomAction ();
 	}
 	
 	// Update is called once per frame

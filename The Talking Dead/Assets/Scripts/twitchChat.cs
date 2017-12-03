@@ -21,8 +21,8 @@ public class twitchChat : MonoBehaviour
     public string username;
     public List<string> channels;
 
-	//counter for upvotes and downvotes
-	public static int UpvoteDownvote;
+	public VoteAggregator voteAggregator;
+	public Prompt prompt;
 
     private string address = "irc.chat.twitch.tv";
     private int port = 6667;
@@ -334,13 +334,16 @@ public class twitchChat : MonoBehaviour
 				if (vote == "up") 
 				{
 					//set vote to 1
-					UpvoteDownvote = 1;
+//					UpvoteDownvote = 1;
+					voteAggregator.Vote(1);
 				}
 				else if (vote == "down") 
 				{
-					UpvoteDownvote = 0;
+//					UpvoteDownvote = 0;
+					voteAggregator.Vote(0);
 				} 
-				Debug.Log (UpvoteDownvote);
+				voteAggregator.CalculateAvg();
+
 			}
 
         }
