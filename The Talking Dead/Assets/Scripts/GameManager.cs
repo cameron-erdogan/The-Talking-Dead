@@ -29,18 +29,24 @@ public class GameManager : MonoBehaviour
 		startTime = Time.time;
 		timeLeft = totalTime;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		ZombieUpdate ();
 
-		if (AudienceUI != null) {
-			AudienceUI.UpdateText (currentZombies);
-		}
+    // Update is called once per frame
+    void Update()
+    {
+        ZombieUpdate();
 
-		TimeUpdate ();
-	}
+        if (AudienceUI != null)
+        {
+            AudienceUI.UpdateText(currentZombies);
+        }
+
+        TimeUpdate();
+
+        if (Input.GetKeyDown("space"))
+        {
+            TimeUp();
+        }
+    }
 
 	private void ZombieUpdate ()
 	{
@@ -104,7 +110,7 @@ public class GameManager : MonoBehaviour
 
 	public void TimeUp ()
 	{
-		Time.timeScale = 0;
+		//Time.timeScale = 0;
 
 		print ("you survived!");
 
