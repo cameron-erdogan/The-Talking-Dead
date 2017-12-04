@@ -22,7 +22,6 @@ public class twitchChat : MonoBehaviour
     public List<string> channels;
 
 	public VoteAggregator voteAggregator;
-	public Prompt prompt;
 	public static float avg;
 
     private string address = "irc.chat.twitch.tv";

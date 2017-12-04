@@ -140,6 +140,8 @@ GameObject:
   - component: {fileID: 224896181327031016}
   - component: {fileID: 222290236128967618}
   - component: {fileID: 114538755081365186}
+  - component: {fileID: 114553681072597472}
+  - component: {fileID: 114674527064606624}
   m_Layer: 5
   m_Name: Vote
   m_TagString: Untagged
@@ -741,13 +743,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 3
   m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
+  m_FillCenter: 0
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 0
   m_FillOrigin: 0
 --- !u!114 &114541390717958994
 MonoBehaviour:
@@ -856,6 +858,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Skydiving
+--- !u!114 &114553681072597472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463562505869558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f9ff0a2d85f40a99893ac526740854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114560180990339844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -955,6 +968,20 @@ MonoBehaviour:
     word2
 
     word3'
+--- !u!114 &114674527064606624
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1463562505869558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fea079803f44f4c9ce3db1d4d110ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vote: {fileID: 0}
+  avg: {fileID: 0}
+  voteAggregator: {fileID: 0}
 --- !u!114 &114936599491175482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1287,8 +1314,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1963058588579850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.79875, y: 0.79875, z: 0.79875}
+  m_LocalPosition: {x: 0, y: 0, z: -2.3104796}
+  m_LocalScale: {x: 0.675, y: 0.675, z: 0.675}
   m_Children:
   - {fileID: 224911510818023654}
   - {fileID: 224785346317239184}
@@ -1407,7 +1434,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463562505869558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 115.8, y: -18.099976, z: 0}
+  m_LocalPosition: {x: 115.799805, y: -18.099976, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224851588316559246}
@@ -1417,7 +1444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 165.8, y: 31.900024}
+  m_AnchoredPosition: {x: 165.7998, y: 31.900024}
   m_SizeDelta: {x: 200, y: 5}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224911510818023654

@@ -17,16 +17,14 @@ public class GrabAggregateVote : MonoBehaviour {
 
 		Vote = GetComponent<Image> ();
 		//start at 0.5 for neutral
-		VoteUI = StartVote;
+		Vote.fillAmount = StartVote;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (VoteAggregator.aggregate == null) {
-			Vote.fillAmount = VoteUI;
-		} else {
-			Vote.fillAmount = twitchChat.avg;
-		}
+		Vote.fillAmount = twitchChat.avg;
+
 	}
 }
