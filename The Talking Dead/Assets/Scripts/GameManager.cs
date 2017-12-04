@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
 	public WordQueue WordQueue;
 	public ZombieFactory ZombieFactory;
+    public AudienceUI AudienceUI;
 
 	private List<WordZombie> currentZombies;
 	private float zombieTimer = 0f;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ZombieUpdate ();
+        AudienceUI.UpdateText(currentZombies);
 	}
 
 	private void ZombieUpdate(){
