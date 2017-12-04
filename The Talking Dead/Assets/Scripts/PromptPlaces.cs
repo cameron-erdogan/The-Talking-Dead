@@ -11,7 +11,7 @@ public class PromptPlaces : MonoBehaviour {
 	void Start () {
 
 		two = GetComponent<TextMesh>();
-		two.text = RandomPrompt.inst.place;
+        two.text = RandomPrompt.inst.place;
 	}
 	
 	// Update is called once per frame

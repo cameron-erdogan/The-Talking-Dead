@@ -22,7 +22,6 @@ public class twitchChat : MonoBehaviour
     public List<string> channels;
 
 	public VoteAggregator voteAggregator;
-	public static float avg;
 
     private string address = "irc.chat.twitch.tv";
     private int port = 6667;
@@ -341,9 +340,7 @@ public class twitchChat : MonoBehaviour
 				{
 //					UpvoteDownvote = 0;
 					voteAggregator.Vote(0);
-				} 
-				avg = voteAggregator.CalculateAvg();
-				Debug.LogError (avg);
+				}
 			}
 
         }

@@ -9,7 +9,6 @@ public class GrabAggregateVote : MonoBehaviour {
 	private float StartVote = 0.5f;
 	public static float VoteUI;
 
-	public twitchChat avg;
 	public VoteAggregator voteAggregator;
 
 	// Use this for initialization
@@ -23,8 +22,6 @@ public class GrabAggregateVote : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		Vote.fillAmount = twitchChat.avg;
-
+        Vote.fillAmount = voteAggregator.GetCurrentAvg();
 	}
 }

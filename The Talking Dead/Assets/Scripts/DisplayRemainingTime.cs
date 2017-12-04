@@ -9,11 +9,14 @@ public class DisplayRemainingTime : MonoBehaviour {
     private double totalTime = 120.00;
     private double startTime;
 
+    private double timeLeft;
+
     // Use this for initialization
     void Start()
     {
         tm = GetComponent<TextMesh>();
         startTime = Time.time;
+        timeLeft = totalTime;
     }
 
     // Update is called once per frame
@@ -22,10 +25,10 @@ public class DisplayRemainingTime : MonoBehaviour {
         double timeElapsed = Time.time - startTime;
         if(timeElapsed < totalTime)
         {
-            double timeLeft = totalTime - timeElapsed;
-            if (tm.text != timeLeft.ToString("F"))
+            timeLeft = totalTime - timeElapsed;
+            if (tm.text != timeLeft.ToString("F0"))
             {
-                tm.text = timeLeft.ToString("F");
+                tm.text = timeLeft.ToString("F0");
             }
         }
         else
@@ -35,5 +38,10 @@ public class DisplayRemainingTime : MonoBehaviour {
             gameManager.TimeUp();
         }
         
+    }
+
+    public double GetRemainingTime()
+    {
+        return timeLeft;
     }
 }

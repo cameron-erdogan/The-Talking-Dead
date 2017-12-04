@@ -11,7 +11,7 @@ public class PromptPerson : MonoBehaviour {
 	void Start () {
 
 		one = GetComponent<TextMesh>();
-		one.text = RandomPrompt.inst.person;
+        one.text = RandomPrompt.inst.person;
 	}
 	
 	// Update is called once per frame

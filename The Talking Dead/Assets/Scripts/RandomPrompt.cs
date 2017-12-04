@@ -111,7 +111,7 @@ public class RandomPrompt : MonoBehaviour {
 	};
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		inst = this;
 
@@ -129,8 +129,5 @@ public class RandomPrompt : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

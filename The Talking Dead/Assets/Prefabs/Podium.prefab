@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33391774629294322}
   - component: {fileID: 64860846901147336}
   - component: {fileID: 23716284771698384}
+  - component: {fileID: 114469617693341564}
   m_Layer: 0
   m_Name: Prompts
   m_TagString: Untagged
@@ -89,8 +90,9 @@ GameObject:
   - component: {fileID: 4527297861486820}
   - component: {fileID: 23920221937091754}
   - component: {fileID: 102985705091496664}
+  - component: {fileID: 114231017472247910}
   m_Layer: 0
-  m_Name: two
+  m_Name: place
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,8 +108,9 @@ GameObject:
   - component: {fileID: 4624795079558098}
   - component: {fileID: 23838484330721286}
   - component: {fileID: 102790810562342038}
+  - component: {fileID: 114959001903594618}
   m_Layer: 0
-  m_Name: three
+  m_Name: action
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,8 +215,9 @@ GameObject:
   - component: {fileID: 4053256927794934}
   - component: {fileID: 23417210002160710}
   - component: {fileID: 102289145535121554}
+  - component: {fileID: 114689050563851982}
   m_Layer: 0
-  m_Name: one
+  m_Name: person
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,7 +906,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1915897423097452}
-  m_Text: Princess
+  m_Text: Benjamin Franklin
   m_OffsetZ: 0
   m_CharacterSize: 0.03
   m_LineSpacing: 1
@@ -965,7 +969,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1649252557191136}
-  m_Text: Skydiving
+  m_Text: Cooking
   m_OffsetZ: 0
   m_CharacterSize: 0.03
   m_LineSpacing: 1
@@ -1028,7 +1032,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1577461103339624}
-  m_Text: Mars
+  m_Text: Wonderland
   m_OffsetZ: 0
   m_CharacterSize: 0.03
   m_LineSpacing: 1
@@ -1053,6 +1057,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0dfe4358bb8bcd4bac487259b214d3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114231017472247910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1577461103339624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 708ba546ebfe245b194b304c5ab838e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  two: {fileID: 102985705091496664}
 --- !u!114 &114442358632113424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1065,6 +1081,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
+--- !u!114 &114469617693341564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1066188828166586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe672ded592540c7bf0e7249e07f5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  person: 
+  place: 
+  action: 
+--- !u!114 &114689050563851982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915897423097452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a647d7ad5e8c404ca750382e8caf2a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  one: {fileID: 102289145535121554}
+--- !u!114 &114959001903594618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649252557191136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c6bb6f2846d458c87013b7ff079323, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  three: {fileID: 102790810562342038}
 --- !u!136 &136243553059957704
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -6,32 +6,23 @@ public class VoteAggregator : MonoBehaviour {
 
 //	public static int UpvoteDownvote;
 
-	public static int[] aggregate; 
+	public static float[] aggregate; 
 	private int nextIndex = 0;
-	private int count = 0;
 
-	private float avg = 0.0F;
-	private int sum = 0;
+	private float currentAvg = 0.0F;
 
-	void Start () {
+    void Start() {
 
-		aggregate = new int[10];
+        aggregate = new float[10];
+        for (int i = 0; i < aggregate.Length; i++)
+        {
+            aggregate[i] = 0.5f;
+        }
 
-		//take vote and add to array
-//		count = count+1;
-//
-//		if ( count%10 == 0 ) {
-//			nextIndex = 0;
-//		}
-//
-//		//put upvote or downvote into the array from twitchChat
-//		aggregate[nextIndex++] = twitchChat.UpvoteDownvote;
+        updateCurrentAvg();
 	}
 
 	public void Vote(int vote){
-
-		//take vote and add to array
-		count = count+1;
 
 		//put upvote or downvote into the array from twitchChat
 		aggregate[nextIndex] = vote;
@@ -41,31 +32,39 @@ public class VoteAggregator : MonoBehaviour {
 			nextIndex = 0;
 		}
 
+        updateCurrentAvg();
 	}
 
-	public int CalculateSum() {
+	public float CalculateSum() {
 
-		sum = 0;
+		float sum = 0;
 
 		//create a sum
 		for ( int i = 0; i < aggregate.Length; i++ ) {
 			sum += aggregate[i];
 		}
-		Debug.Log (sum);
+		//Debug.Log (sum);
 		return sum;
 	}
 
-	public float CalculateAvg() {
+	private float calculateAvg() {
 
 		//create average and return it for UI element
-		int sum = CalculateSum ();
-		float avg = (float)sum / count;
+		float sum = CalculateSum ();
+		float avg = sum / aggregate.Length;
 
-		Debug.Log (avg);
+		//Debug.Log (avg);
 		return avg;
 	}
+
+    private void updateCurrentAvg()
+    {
+        currentAvg = calculateAvg();
+    }
+
+    public float GetCurrentAvg()
+    {
+        return currentAvg;
+    }
 	
-	// Update is called once per frame
-	void Update () {
-	}
 }
