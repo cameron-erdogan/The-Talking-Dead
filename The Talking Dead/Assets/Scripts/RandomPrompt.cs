@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RandomPrompt : MonoBehaviour {
+public class RandomPrompt : MonoBehaviour
+{
 
 	public static RandomPrompt inst;
 
@@ -111,20 +112,22 @@ public class RandomPrompt : MonoBehaviour {
 	};
 
 	// Use this for initialization
-	void Awake () {
+	void Awake ()
+	{
 
 		inst = this;
+		DontDestroyOnLoad (this);
 
 		//for each of the 3 arrays, find random word
-		person = PersonArray[Random.Range(0, PersonArray.Length)];
+		person = PersonArray [Random.Range (0, PersonArray.Length)];
 		Debug.LogError (person);
 
 		//for each of the 3 arrays, find random word
-		place = PlacesArray[Random.Range(0, PlacesArray.Length)];
+		place = PlacesArray [Random.Range (0, PlacesArray.Length)];
 		Debug.LogError (place);
 
 		//for each of the 3 arrays, find random word
-		action = ActionsArray[Random.Range(0, ActionsArray.Length)];
+		action = ActionsArray [Random.Range (0, ActionsArray.Length)];
 		Debug.LogError (action);
 
 	}

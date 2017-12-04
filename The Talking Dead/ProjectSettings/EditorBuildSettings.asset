@@ -9,5 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/VR - Start.unity
     guid: b1a8608156ad9fa438790cc882a91f20
   - enabled: 1
+    path: Assets/Scenes/VR - PromptView.unity
+    guid: 84d92afc37bd44280ab6aee20e062a84
+  - enabled: 1
     path: Assets/Scenes/VR - Prototype.unity
     guid: e2e64935b859a2841a0873b7bc94b256
