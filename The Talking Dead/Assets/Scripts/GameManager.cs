@@ -105,7 +105,6 @@ public class GameManager : MonoBehaviour
 	public void ZombieAttackedPlayer (WordZombie zombie)
 	{
 		Debug.Log ("zombie killed you! " + zombie.GetWord ());
-		Time.timeScale = 0;
 
 		print ("zombies killed: " + zombieKilled);
 
