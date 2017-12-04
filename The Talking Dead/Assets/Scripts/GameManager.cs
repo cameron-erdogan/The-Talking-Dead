@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 	public WordQueue WordQueue;
 	public ZombieFactory ZombieFactory;
 	public AudienceUI AudienceUI;
+	public VoteAggregator VoteAggregator;
 
 	private List<WordZombie> currentZombies;
 	private float zombieTimer = 0f;
@@ -46,7 +47,22 @@ public class GameManager : MonoBehaviour
         {
             TimeUp();
         }
+
+		updateZombieSpeed ();
     }
+
+	private void updateZombieSpeed (){
+		//should be 0.5 initially
+
+		//need to find 1 - average for parametric value because 1 is slow and 0 is fast.
+		float t = 1f - VoteAggregator.GetCurrentAvg ();
+
+		//we want 0.5 value to map to MoveTowardsPlayer.BaseSpeed
+		float lowerLimit = MoveTowardsPlayer.BaseSpeed - 0.2f;
+		float upperLimit = MoveTowardsPlayer.BaseSpeed + 0.2f;
+
+		MoveTowardsPlayer.Speed = Mathf.Lerp (lowerLimit, upperLimit, t);
+	}
 
 	private void ZombieUpdate ()
 	{

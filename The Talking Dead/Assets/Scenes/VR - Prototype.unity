@@ -276,6 +276,11 @@ Prefab:
       propertyPath: AudienceUI
       value: 
       objectReference: {fileID: 746095698}
+    - target: {fileID: 114164689790066998, guid: 7b40d10ffbfa24b609c7ae3cc7ae981c,
+        type: 2}
+      propertyPath: VoteAggregator
+      value: 
+      objectReference: {fileID: 538179117}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b40d10ffbfa24b609c7ae3cc7ae981c, type: 2}
   m_IsPrefabParent: 0
@@ -384,7 +389,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812106042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 417, y: 261, z: 0}
+  m_LocalPosition: {x: 603, y: 377, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -812,12 +817,12 @@ Prefab:
     - target: {fileID: 224652770252191958, guid: b8ff593493adc4cf5ab10f967ec4d147,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 417
+      value: 603
       objectReference: {fileID: 0}
     - target: {fileID: 224652770252191958, guid: b8ff593493adc4cf5ab10f967ec4d147,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 261
+      value: 377
       objectReference: {fileID: 0}
     - target: {fileID: 224652770252191958, guid: b8ff593493adc4cf5ab10f967ec4d147,
         type: 2}

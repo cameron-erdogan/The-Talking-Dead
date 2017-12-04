@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class MoveTowardsPlayer : MonoBehaviour {
 
-	public float Speed = 1f;
+	public static float Speed = 1f;
+	public static float BaseSpeed = 0.4f;
 	private Transform player;
 
 	void Start(){
 		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		MoveTowardsPlayer.Speed = BaseSpeed;
 	}
 
 	void Update() {

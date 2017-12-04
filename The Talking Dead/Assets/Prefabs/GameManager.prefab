@@ -156,6 +156,7 @@ MonoBehaviour:
   WordQueue: {fileID: 114839132949085248}
   ZombieFactory: {fileID: 0}
   AudienceUI: {fileID: 0}
+  VoteAggregator: {fileID: 0}
   zombieKilled: 0
   timeElapsed: 0
   timeLeft: 0
