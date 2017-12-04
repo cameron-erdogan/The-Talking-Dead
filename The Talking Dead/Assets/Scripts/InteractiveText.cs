@@ -20,7 +20,10 @@ public class InteractiveText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (Input.GetKeyDown("space"))
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
