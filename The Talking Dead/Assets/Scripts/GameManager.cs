@@ -125,8 +125,6 @@ public class GameManager : MonoBehaviour
 
 	public void TimeUp ()
 	{
-		//Time.timeScale = 0;
-
 		print ("you survived!");
 
 		//call deathevent
